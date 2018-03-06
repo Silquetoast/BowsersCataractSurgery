@@ -58,18 +58,7 @@ minutes = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(frames &lt; 30){
-    frames += 1
-} else {
-    frames = 0
-    seconds += 1
-}
-if(seconds &gt; 60)
-{
-    seconds = 0
-    minutes++
-}
-
+            <string>tick_timer()
 </string>
           </argument>
         </arguments>
