@@ -18,7 +18,9 @@ if(global.musicIsOn = true)
 {
     audio_play_sound(snd_luigi, 1, false)
     audio_play_sound(snd_level1, 0, true)
-}</code>
+}
+
+global.time = 0</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

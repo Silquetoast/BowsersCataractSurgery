@@ -1,12 +1,13 @@
-if(frames < 30){
-    frames += 1
+if(global.frames < 30){
+    global.frames++
 } else {
-    frames = 0
-    seconds += 1
+    global.frames = 0
+    global.seconds++
+    global.time++
 }
-if(seconds > 60)
+if(global.seconds > 60)
 {
-    seconds = 0
-    minutes++
+    global.seconds = 0
+    global.minutes++
 }
 

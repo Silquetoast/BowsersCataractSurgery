@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -32,9 +32,9 @@ global.checkpoint = false
 
 health = 100
 
-frames = 0
-seconds = 0
-minutes = 0
+ini_open("hiscore.sav");
+global.best_time = ini_read_real("records", "best_time", 1000);
+ini_close()
 
 </string>
           </argument>
@@ -59,6 +59,12 @@ minutes = 0
           <argument>
             <kind>1</kind>
             <string>tick_timer()
+
+if(room == rm_menu)
+{
+    instance_destroy()
+}
+
 </string>
           </argument>
         </arguments>
@@ -112,7 +118,7 @@ minutes = 0
 if(room = rm_level1)
 {
     draw_set_color(c_black)
-    draw_text(i*sprite_get_width(spr_life) + 10, room_height - 32, (string("Time: "+string(minutes)+":"+string(seconds))));
+    draw_text(i*sprite_get_width(spr_life) + 10, room_height - 32, (string("Time: "+string(global.best_time)+":"+string(global.time))));
     if(lives &gt;= 0)
     {
         draw_text(i*sprite_get_width(spr_life) + 10, room_height - 17, "Score: " + string(score));
@@ -121,14 +127,12 @@ if(room = rm_level1)
 else if(room = rm_boss)
 {
     draw_set_color(c_white)
-    draw_text(i*sprite_get_width(spr_life) + 10, room_height - 32, "Boo Health: " + string(health));
+    draw_text(i*sprite_get_width(spr_life) + 10, room_height - 32, (string("Time: "+string(global.best_time)+":"+string(global.time))));
     if(lives &gt;= 0)
     {
         draw_text(i*sprite_get_width(spr_life) + 10, room_height - 17, "Score: " + string(score));
     }
 }
-
-
 </string>
           </argument>
         </arguments>

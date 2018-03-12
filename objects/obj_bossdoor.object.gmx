@@ -48,11 +48,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.boss2 = 1)
+            <string>hiscore_update();
+if(global.boss2 = 1)
 {
     show_message("Congratulations, You Win! Do you want to go back to the menu?")
     room_goto(rm_menu)
 }
+
 </string>
           </argument>
         </arguments>
