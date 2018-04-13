@@ -20,7 +20,18 @@ if(global.musicIsOn = true)
     audio_play_sound(snd_level1, 0, true)
 }
 
-global.time = 0</code>
+global.time = 0
+global.frames = 0
+global.seconds = 0
+global.minutes = 0
+global.checkpoint = false
+
+bestmins = floor(global.best_time/60);
+bestsecs = global.best_time%60;
+global.out_best_time = string(bestmins)+":"+string(bestsecs);
+if(global.best_time == 413000){
+    global.out_best_time = "No record."
+}</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

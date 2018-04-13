@@ -36,6 +36,7 @@ ini_open("hiscore.sav");
 global.best_time = ini_read_real("records", "best_time", 1000);
 ini_close()
 
+global.out_best_time = ""
 </string>
           </argument>
         </arguments>
@@ -118,19 +119,19 @@ if(room == rm_menu)
 if(room = rm_level1)
 {
     draw_set_color(c_black)
-    draw_text(i*sprite_get_width(spr_life) + 10, room_height - 32, (string("Time: "+string(global.best_time)+":"+string(global.time))));
+    draw_text(i*sprite_get_width(spr_life) + 10, room_height - 32, (string("Time: "+global.out_time)));
     if(lives &gt;= 0)
     {
-        draw_text(i*sprite_get_width(spr_life) + 10, room_height - 17, "Score: " + string(score));
+        draw_text(i*sprite_get_width(spr_life) + 10, room_height - 17, "Best Time: " + string(global.out_best_time));
     }
 }
 else if(room = rm_boss)
 {
     draw_set_color(c_white)
-    draw_text(i*sprite_get_width(spr_life) + 10, room_height - 32, (string("Time: "+string(global.best_time)+":"+string(global.time))));
+    draw_text(i*sprite_get_width(spr_life) + 10, room_height - 32, (string("Time: "+global.out_time)));
     if(lives &gt;= 0)
     {
-        draw_text(i*sprite_get_width(spr_life) + 10, room_height - 17, "Score: " + string(score));
+        draw_text(i*sprite_get_width(spr_life) + 10, room_height - 17, "Best Time: " + string(global.out_best_time));
     }
 }
 </string>

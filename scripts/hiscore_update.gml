@@ -7,3 +7,15 @@ if(global.time < global.best_time){
 }
 ini_close()
 
+
+bestmins = global.best_time/60;
+bestsecs = global.best_time%60;
+global.out_best_time = string(bestmins)+":"+string(bestsecs)
+if(global.best_time == 413000){
+    global.out_best_time = "No record."
+}
+
+global.out_hiscore = string(bestmins)+":"+string(bestsecs);
+if(debug_mode) {
+    global.best_time = 413000;
+}

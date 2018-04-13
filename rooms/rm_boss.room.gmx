@@ -60,7 +60,6 @@ if(global.musicIsOn = true)
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_control" x="96" y="32" name="inst_D5B9C59E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_player" x="128" y="654" name="inst_AC566D1E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_centerwall" x="64" y="768" name="inst_DE57CA3C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_centerwall" x="128" y="768" name="inst_44F8EBFC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
