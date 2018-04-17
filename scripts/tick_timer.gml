@@ -34,3 +34,5 @@ if(global.minutes < 10){
 }
 
 global.out_time = outmins+":"+outsecs+":"+outfrms;
+
+
