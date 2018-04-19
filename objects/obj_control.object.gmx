@@ -36,7 +36,7 @@ ini_open("hiscore.sav");
 global.best_time = ini_read_real("records", "best_time", 1000);
 ini_close()
 
-global.out_best_time = ""
+
 </string>
           </argument>
         </arguments>
@@ -122,7 +122,7 @@ if(room = rm_level1)
     draw_text(i*sprite_get_width(spr_life) + 10, room_height - 32, (string("Time: "+global.out_time)));
     if(lives &gt;= 0)
     {
-        draw_text(i*sprite_get_width(spr_life) + 10, room_height - 17, "Best Time: " + string(global.out_best_time));
+        draw_text(i*sprite_get_width(spr_life) + 10, room_height - 17, "Best Time: " + string(global.out_hiscore));
     }
 }
 else if(room = rm_boss)
@@ -131,7 +131,7 @@ else if(room = rm_boss)
     draw_text(i*sprite_get_width(spr_life) + 10, room_height - 32, (string("Time: "+global.out_time)));
     if(lives &gt;= 0)
     {
-        draw_text(i*sprite_get_width(spr_life) + 10, room_height - 17, "Best Time: " + string(global.out_best_time));
+        draw_text(i*sprite_get_width(spr_life) + 10, room_height - 17, "Best Time: " + string(global.out_hiscore));
     }
 }
 </string>

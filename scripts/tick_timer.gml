@@ -33,6 +33,14 @@ if(global.minutes < 10){
     outmins = string(global.minutes);
 }
 
-global.out_time = outmins+":"+outsecs+":"+outfrms;
+if(outmins < 10){
+    global.out_time = "0"+outmins+":"+outsecs+":"+outfrms;
+} else if(outsecs < 10){
+    global.out_time = outmins+":0"+outsecs+":"+outfrms;
+} else if((outsecs < 10)&&(outmins < 10)){
+    global.out_time = "0"+outmins+":0"+outsecs+":"+outfrms;
+} else {
+    global.out_time = outmins+":"+outsecs+":"+outfrms;
+}
 
 
