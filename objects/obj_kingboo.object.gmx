@@ -29,8 +29,8 @@
 
 active = false
 
-abc = false
-abcd = false
+booDead = false
+startDelay = false
 
 </string>
           </argument>
@@ -105,10 +105,10 @@ score += 4000
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(abcd = false)
+            <string>if(startDelay = false) // adds a delay to King Boo's activation
 {
     alarm[1] = room_speed
-    abcd = true
+    startDelay = true
 }
 
 if(obj_player.x &gt; x)
@@ -134,10 +134,10 @@ if(health = 0)
     dir = point_direction(x,y,288,256)
     phy_speed_x = lengthdir_x(5, dir)
     phy_speed_y = lengthdir_y(5, dir)
-    if(abc = false)
+    if(booDead = false) // abc = ???
     {
         alarm[0] = room_speed * 4
-        abc = true
+        booDead = true
     }
 }
 </string>

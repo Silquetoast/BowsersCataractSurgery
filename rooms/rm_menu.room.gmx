@@ -19,7 +19,11 @@ if(global.musicIsOn = true)
 
 //room_goto(rm_level1)
 
-draw_set_font(-1)</code>
+draw_set_font(-1)
+
+ini_open("hiscore.sav");
+global.best_time = ini_read_real("records", "best_time", 1000);
+ini_close()</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>0</clearDisplayBuffer>

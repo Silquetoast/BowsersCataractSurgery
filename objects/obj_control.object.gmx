@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -57,6 +57,40 @@ global.move = 0
           <argument>
             <kind>1</kind>
             <string>ai_timer()
+
+ini_open("hiscore.sav");
+global.best_time = ini_read_real("records", "best_time", 1000);
+ini_close()
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>tick_timer()
+
+if(room == rm_menu)
+{
+    instance_destroy()
+}
 
 </string>
           </argument>
@@ -111,23 +145,21 @@ global.move = 0
 if(room = rm_level1)
 {
     draw_set_color(c_black)
-    draw_text(i*sprite_get_width(spr_life) + 10, room_height - 32, "Coins Left: " + (string(5 - global.boss)));
+    draw_text(i*sprite_get_width(spr_life) + 10, room_height - 32, (string("Time: "+global.out_time)));
     if(lives &gt;= 0)
     {
-        draw_text(i*sprite_get_width(spr_life) + 10, room_height - 17, "Score: " + string(global.frame));
+        draw_text(i*sprite_get_width(spr_life) + 10, room_height - 17, "Best Time: " + string(global.out_hiscore));
     }
 }
 else if(room = rm_boss)
 {
     draw_set_color(c_white)
-    draw_text(i*sprite_get_width(spr_life) + 10, room_height - 32, "Boo Health: " + string(health));
+    draw_text(i*sprite_get_width(spr_life) + 10, room_height - 32, (string("Time: "+global.out_time)));
     if(lives &gt;= 0)
     {
-        draw_text(i*sprite_get_width(spr_life) + 10, room_height - 17, "Score: " + string(score));
+        draw_text(i*sprite_get_width(spr_life) + 10, room_height - 17, "Best Time: " + string(global.out_hiscore));
     }
 }
-
-
 </string>
           </argument>
         </arguments>

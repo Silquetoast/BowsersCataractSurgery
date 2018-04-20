@@ -69,6 +69,8 @@
   <scripts name="scripts">
     <script>scripts\ai_move.gml</script>
     <script>scripts\ai_timer.gml</script>
+    <script>scripts\tick_timer.gml</script>
+    <script>scripts\hiscore_update.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_instructions</font>
