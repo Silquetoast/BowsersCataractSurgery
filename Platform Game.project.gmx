@@ -69,6 +69,10 @@
     <path>paths\path_goomba</path>
     <path>paths\path_boo</path>
   </paths>
+  <scripts name="scripts">
+    <script>scripts\tick_timer.gml</script>
+    <script>scripts\hiscore_update.gml</script>
+  </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_instructions</font>
   </fonts>
