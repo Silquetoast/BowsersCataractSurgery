@@ -172,7 +172,6 @@ if(global.musicIsOn = true)
     <instance objName="obj_centerwall" x="992" y="96" name="inst_20B3A703" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_centerwall" x="992" y="64" name="inst_F6F6C8C1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_centerwall" x="992" y="32" name="inst_8E34B146" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_centerwall" x="992" y="0" name="inst_DC9EFB43" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_centerwall" x="960" y="0" name="inst_A0C17C0B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_centerwall" x="928" y="0" name="inst_0F960728" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_centerwall" x="896" y="0" name="inst_9166AF35" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -236,7 +235,7 @@ if(global.musicIsOn = true)
     <instance objName="obj_coin2" x="416" y="576" name="inst_BBE6590F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_coin2" x="832" y="256" name="inst_3D8D00E9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_midwall" x="544" y="224" name="inst_A4134991" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_coin2" x="560" y="145" name="inst_317D538E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_coin2" x="512" y="128" name="inst_317D538E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_coin2" x="320" y="32" name="inst_08335423" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_movingplatform2" x="384" y="128" name="inst_831E144A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_midwall" x="128" y="0" name="inst_8876E825" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -257,6 +256,7 @@ if(global.musicIsOn = true)
     <instance objName="obj_centerwall" x="-64" y="416" name="inst_8DC433E8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_centerwall" x="-64" y="384" name="inst_E2428552" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_centerwall" x="-64" y="352" name="inst_9F9ABFC1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_boosprite" x="996" y="16" name="inst_435CDDE0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>-1</PhysicsWorld>
@@ -265,6 +265,6 @@ if(global.musicIsOn = true)
   <PhysicsWorldRight>1024</PhysicsWorldRight>
   <PhysicsWorldBottom>768</PhysicsWorldBottom>
   <PhysicsWorldGravityX>0</PhysicsWorldGravityX>
-  <PhysicsWorldGravityY>20</PhysicsWorldGravityY>
+  <PhysicsWorldGravityY>30</PhysicsWorldGravityY>
   <PhysicsWorldPixToMeters>0.100000001490116</PhysicsWorldPixToMeters>
 </room>

@@ -32,10 +32,7 @@
     </sprites>
     <sprites name="Player">
       <sprite>sprites\spr_player_walk</sprite>
-      <sprite>sprites\spr_player_walk2</sprite>
       <sprite>sprites\spr_player_falling</sprite>
-      <sprite>sprites\spr_player_falling2</sprite>
-      <sprite>sprites\spr_player2</sprite>
       <sprite>sprites\spr_player</sprite>
       <sprite>sprites\spr_life</sprite>
     </sprites>
@@ -69,6 +66,10 @@
     <path>paths\path_goomba</path>
     <path>paths\path_boo</path>
   </paths>
+  <scripts name="scripts">
+    <script>scripts\ai_move.gml</script>
+    <script>scripts\ai_timer.gml</script>
+  </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_instructions</font>
   </fonts>
@@ -102,6 +103,7 @@
     </objects>
     <objects name="Player &amp; Enemies">
       <object>objects\obj_player</object>
+      <object>objects\obj_goombaevolved</object>
       <object>objects\obj_flyinggoomba</object>
       <object>objects\obj_boo</object>
       <object>objects\obj_kingboo</object>

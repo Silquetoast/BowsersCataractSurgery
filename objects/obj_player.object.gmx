@@ -78,9 +78,14 @@ jumping = false
 }
 
 //prevents from jumping too high
-if(phy_speed_y &lt; -7)
+/*if(phy_speed_y &lt; -7)
 {
     phy_speed_y = -7
+}*/
+
+if(phy_speed_x &lt; -7)
+{
+    phy_speed_x = -7
 }
 
 if(y &gt;= 840)
@@ -102,75 +107,6 @@ if(y &gt;= 840)
         show_message("Game Over! Restart?");
         room_goto(rm_menu);
     }
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_coin2">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>score += 250
-health -= 25
-
-with(other)
-{
-    instance_destroy()
-}
-
-if(global.musicIsOn = true)
-{
-    audio_play_sound(snd_coin, 0, false)
-}
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_coin">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>score += 100
-global.boss += 1
-
-with(other)
-{
-    instance_destroy()
-}
-
-if(global.musicIsOn = true)
-{
-    audio_play_sound(snd_coin, 0, false)
 }
 
 </string>
@@ -434,7 +370,7 @@ if(phy_speed_y = 0)
 }
 if(jumping = true &amp;&amp; alarm[0] &lt; 0)
 {
-    physics_apply_impulse(x, y, 0, -20)
+    physics_apply_impulse(x, y, 0, -30)
     jumping = false;
 }
 
